@@ -4,7 +4,7 @@ import { IoIosFemale } from "react-icons/io";
 
 export default function surveyPage() {
   return (
-    <div className="flex justify-center py-8  lg:py-14">
+    <div className="flex justify-center py-8 lg:py-14">
       <div className="grid lg:grid-cols-2  gap-4">
         {/* First input */}
         <div className="relative">

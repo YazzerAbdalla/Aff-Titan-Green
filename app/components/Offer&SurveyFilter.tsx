@@ -11,7 +11,7 @@ export default function OfferSurveyFilter({
   setFilter: Dispatch<SetStateAction<string>>;
 }) {
   return (
-    <div className="w-full mt-[150px] max-w-md px-2 sm:px-0 mx-auto justify-center ">
+    <div className="w-full mt-[150px] px-2 sm:px-0 mx-auto flex justify-center ">
       <Tab.Group
         defaultIndex={0}
         onChange={(index) => {
@@ -23,7 +23,7 @@ export default function OfferSurveyFilter({
           }
         }}
       >
-        <Tab.List className="flex space-x-1 rounded-xl p-1 bg-[#16a34a]">
+        <Tab.List className="flex lg:w-[1100px] w-[400px] space-x-1 rounded-xl p-1 bg-[#16a34a]">
           <Tab
             className={({ selected }) =>
               classNames(
