@@ -1,19 +1,18 @@
 export interface CardsProps {
-  id: number;
-  offer_type?: string;
-  model?: string;
+  campaign_id?: string;
+  icon: string;
   name: string;
+  description?: string;
+  short_description?: string;
+  amount: string ;
+  campaign_os_target?: string;
+  url?: string;
   instructions?: string;
-  description: string;
-  short_description: string;
-  disclaimer?: string;
+  instructions_array?: string[];
+  goals?: string;
   payout?: string;
-  image: string;
-  countries?: string[];
-  goals?: null;
-  os: string;
-  incent?: string;
-  url: string;
-  reward: number;
-  favorite?: number;
+  is_multi_reward?: boolean;
+  is_market_research?: boolean;
+  requires_redirection?: boolean;
+  favourite?: number;
 }
