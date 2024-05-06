@@ -4,10 +4,10 @@ import { IoIosFemale } from "react-icons/io";
 
 export default function surveyPage() {
   return (
-    <div className="flex justify-center py-8 lg:py-14">
-      <div className="grid lg:grid-cols-2  gap-4">
+    <div className="flex justify-center   py-8 lg:py-14">
+      <div className="grid lg:grid-cols-2    gap-4">
         {/* First input */}
-        <div className="relative">
+        <div className="relative px-2">
           <label htmlFor="birthDate">Year of birth</label>
           <input
             type="date"
@@ -17,13 +17,13 @@ export default function surveyPage() {
           />
         </div>
         {/* Second input */}
-        <div className="relative">
+        <div className="relative px-2">
           <label htmlFor="nextDate">ZIP Code</label>
           <input className="bg-gray-50 border-2 border-[#16A34A] text-gray-900 text-md rounded-lg focus:ring-v focus:border-[#16A34A] block w-full px-7 py-2.5" />
         </div>
         {/* Gender */}
-        <div className="relative">
-          <div className="flex flex-col py-5 items-center">
+        <div className="flex-grow  ">
+          <div className="flex flex-col py-5  items-center">
             <label htmlFor="gender" className="mt-0   text-md font-medium  mr-[18.5rem]">
               Gender
             </label>
