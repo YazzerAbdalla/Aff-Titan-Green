@@ -61,11 +61,8 @@ const OfferDialog = ({
             <div className="w-full flex justify-center absolute bottom-6 lg:-bottom-16 px-6">
               <a
                 target="_blank"
-                className=" flex justify-center items-center text-[#180934] font-bold text-md py-1 px-16 rounded-xl max-w-[450px] min-w-[450px] min-h-[30px] max-h-[30px] lg:max-w-[460px] lg:min-w-[460px] lg:min-h-[39px] lg:max-h-[39px]"
-                style={{
-                  background:
-                    "linear-gradient(104.55deg, #42789B 10%, #68A1C7 35.16%, #5E9CC4 56.34%, #548BAF 68.21%, #568FB5 93.91%, #42789B 93.91%)",
-                }}
+                className=" flex justify-center bg-white items-center text-[#180934] font-bold text-md py-1 px-16 rounded-xl max-w-[450px] min-w-[450px] min-h-[30px] max-h-[30px] lg:max-w-[460px] lg:min-w-[460px] lg:min-h-[39px] lg:max-h-[39px]"
+            
                 href={url}
               >
                 {`Earn ${reward} Coins `}
