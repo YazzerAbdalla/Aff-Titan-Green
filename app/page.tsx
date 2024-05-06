@@ -19,7 +19,7 @@ export default function Home() {
       .get(`/api/offer`)
       .then((response: AxiosResponse<{ offers: CardsProps[] }>) => {
         setOffers(response.data.offers);
-        setTimeout(() => setLoading(false), 3920); // Set loading to false after 3 seconds
+        setTimeout(() => setLoading(false), 3200); // Set loading to false after 3 seconds
       })
       .catch((error) => {
         console.error("Error fetching offers:", error);
