@@ -22,7 +22,7 @@ export default function OfferCard({ reward, name, image }: CardsProps) {
             typeof="lazy"
           />
         </div>
-        <div className="font-bold text-md text-[#000000] mb-2 line-clamp-1">
+        <div className="font-bold text-md text-[#000000] mb-8  line-clamp-1">
           {name}
         </div>
       </div>
