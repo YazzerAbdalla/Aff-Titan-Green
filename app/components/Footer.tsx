@@ -4,8 +4,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div className="relative">
-      <div className="bg-white rounded-lg shadow ">
-        <div className="w-full max-w-screen-xl mx-auto p-4 md:py-16">
+              <div className="w-full max-w-screen-xl mx-auto p-4 md:pt-28">
           <div className="my-6 border-2  border-gray-300  " />
           <div className="text-sm text-gray-500 font-bold sm:text-center flex justify-center">
             <Link href="https://freecash.com/w/revu">
@@ -20,6 +19,5 @@ export default function Footer() {
           </span>
         </div>
       </div>
-    </div>
   );
 }
