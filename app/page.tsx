@@ -25,24 +25,26 @@ export default function Home() {
   return (
     <div>
       <Nav />
-      <div className="flex justify-center w-full">
-        <OfferSurveyFilter setFilter={setOfferFilter} />
-      </div>
-      {offerFilter === "survey" ? (
-        <SurveyPage />
-      ) : (
-        <div className="flex justify-center mt-6 w-full">
-          {offers.length > 0 ? (
-            <div className="lg:grid grid-cols-2 gap-y-2  gap-x-16 flex flex-col  justify-center">
-              {offers.map((offer) => (
-                <OfferDialog key={offer.id} {...offer} />
-              ))}
-            </div>
-          ) : (
-            <p>No offers available</p>
-          )}
+      <div className="min-h-[80dvh]">
+        <div className="flex justify-center w-full">
+          <OfferSurveyFilter setFilter={setOfferFilter} />
         </div>
-      )}
+        {offerFilter === "survey" ? (
+          <SurveyPage />
+        ) : (
+          <div className="flex justify-center mt-6 w-full">
+            {offers.length > 0 ? (
+              <div className="lg:grid grid-cols-2 gap-y-2  gap-x-16 flex flex-col  justify-center">
+                {offers.map((offer) => (
+                  <OfferDialog key={offer.id} {...offer} />
+                ))}
+              </div>
+            ) : (
+              <p>No offers available</p>
+            )}
+          </div>
+        )}
+      </div>
       <Footer />
     </div>
   );
