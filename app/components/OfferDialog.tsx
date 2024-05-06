@@ -14,23 +14,23 @@ import DialogDetails from "./DialogComponents/DialogDetails";
 import OfferCard from "./OfferCard";
 
 const OfferDialog = ({
-  campaign_id,
-  icon,
+  id,
+  image,
   name,
   short_description,
   description,
   instructions,
-  instructions_array,
-  amount,
-  campaign_os_target,
+  reward,
+  os,
   url,
+  goals,
 }: CardsProps) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
         <div className="cursor-pointer ">
           {/** OfferCard */}
-          <OfferCard amount={amount} icon={icon} name={name} />
+          <OfferCard reward={reward} image={image} name={name} />
         </div>
       </DialogTrigger>
       <DialogContent
@@ -39,24 +39,21 @@ const OfferDialog = ({
       >
         <div className="relative">
           <DialogNewHeader
-            url=""
-            amount={amount}
-            campaign_id={campaign_id}
-            campaign_os_target={campaign_os_target}
+            reward={reward}
+            id={id}
+            os={os}
             description={description}
-            icon={icon}
+            image={image}
             short_description={short_description}
             name={name}
           />
           <DialogDetails
-            url=""
-            amount={amount}
-            campaign_id={campaign_id}
-            campaign_os_target={campaign_os_target}
+            reward={reward}
+            id={id}
+            os={os}
             description={description}
-            instructions_array={instructions_array}
             instructions={instructions}
-            icon={icon}
+            image={image}
             short_description={short_description}
             name={name}
           />
@@ -71,7 +68,7 @@ const OfferDialog = ({
                 }}
                 href={url}
               >
-                {`Earn ${amount} Coins `}
+                {`Earn ${reward} Coins `}
                 {/* <img src={"/coinIcon.png"} alt="" width={20} height={20} /> */}
               </a>
             </div>

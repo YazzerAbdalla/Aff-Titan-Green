@@ -35,7 +35,7 @@ export default function Home() {
           {offers.length > 0 ? (
             <div className="lg:grid grid-cols-2 gap-y-2  gap-x-16 flex flex-col  justify-center">
               {offers.map((offer) => (
-                <OfferDialog key={offer.campaign_id} {...offer} />
+                <OfferDialog key={offer.id} {...offer} />
               ))}
             </div>
           ) : (
