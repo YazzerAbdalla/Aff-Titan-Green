@@ -11,7 +11,7 @@ const DialogDetails = ({
   const hrStyle: React.CSSProperties = { borderColor: "black" };
 
   return (
-    <div className="w-full h-[250px]">
+    <div className="w-full h-[250px] overflow-y-auto">
       <div className="flex flex-col w-full gap-1">
         <div className="text-wrap pb-12 flex flex-col gap-3">
           {instructions_array &&
