@@ -35,7 +35,7 @@ const OfferDialog = ({
       </DialogTrigger>
       <DialogContent
         style={{ backgroundColor: "#16a34a" }}
-        className="flex flex-col bg-[#16a34a] gap-0 w-[480px] lg:max-w-[531.99px]  lg:min-w-[534px] border-0 border-[#152457] min-h-[533] max-h-[533px]  lg:min-h-[533px] lg:max-h-[533px]"
+        className="flex flex-col bg-[#16a34a] gap-0 max-w-[354px] min-w-[354px] lg:max-w-[531.99px]  lg:min-w-[534px] border-0 border-[#152457] min-h-[533] max-h-[533px]  lg:min-h-[533px] lg:max-h-[533px]"
       >
         <div className="relative">
           <DialogNewHeader
