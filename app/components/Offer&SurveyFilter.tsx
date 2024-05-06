@@ -23,11 +23,11 @@ export default function OfferSurveyFilter({
           }
         }}
       >
-        <Tab.List className="flex lg:w-[1100px] w-[400px] space-x-1 rounded-xl p-1 bg-[#16a34a]">
+        <Tab.List className="flex lg:w-[978px] w-[400px] space-x-1 rounded-xl p-1 bg-[#16a34a]">
           <Tab
             className={({ selected }) =>
               classNames(
-                "w-full rounded-xl py-2.5 text-sm font-medium leading-5",
+                "w-full rounded-xl py-2.5 text-md font-medium leading-5",
                 "ring-white/60 ring-offset-2 ring-offset-#592a66 focus:outline-none focus:ring-2",
                 selected
                   ? "bg-white text-#0F4889 shadow"
@@ -40,7 +40,7 @@ export default function OfferSurveyFilter({
           <Tab
             className={({ selected }) =>
               classNames(
-                "w-full rounded-xl py-2.5 text-sm font-medium leading-5",
+                "w-full rounded-xl py-2.5 text-md font-medium leading-5",
                 "ring-white/60 ring-offset-2 ring-offset-#592a66 focus:outline-none focus:ring-2",
                 selected
                   ? "bg-white text-#290233 shadow"
