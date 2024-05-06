@@ -1,13 +1,11 @@
 "use client";
 import Link from "next/link";
 
-export default function Nav() {
+export default function Footer() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <main className="flex-1"></main>
-      <div className="bg-white rounded-lg shadow ">
-        <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-          <div className="my-6 border-2  border-gray-200 sm:mx-auto " />
+    <div className="relative">
+              <div className="w-full max-w-screen-xl mx-auto p-4 md:pt-28">
+          <div className="my-6 border-2  border-gray-300  " />
           <div className="text-sm text-gray-500 font-bold sm:text-center flex justify-center">
             <Link href="https://freecash.com/w/revu">
               <span className="mr-4 ">TOS</span>
@@ -21,6 +19,5 @@ export default function Nav() {
           </span>
         </div>
       </div>
-    </div>
   );
 }
