@@ -5,8 +5,8 @@ import Link from "next/link";
 export default function Nav() {
   return (
     <div className="fixed top-0 left-0 w-full z-50 bg-[#16A34A]">
-      <div className="flex justify-between px-5 py-7">
-        <div className="flex items-center  lg:px-60 justify-start">
+      <div className="flex justify-between lg:px-48 py-7">
+        <div className="flex items-center px-3  lg:px-16 justify-start">
           <span className="text-green-400 text-3xl font-bold">
             Aff<span className="text-white px-1">Titan</span>
           </span>
@@ -15,7 +15,7 @@ export default function Nav() {
           </span>
         </div>
 
-        <div className="flex items-center  lg:px-96 justify-end">
+        <div className="flex items-center  lg:px-16 justify-end">
           <div className="flex px-4 bg-black rounded-3xl py-1">
             <img src="/money.png" alt="money" />
             <span className="text-white px-2">0</span>
