@@ -58,7 +58,7 @@ const OfferDialog = ({
             name={name}
           />
           <DialogFooter>
-            <div className="w-full flex justify-center absolute bottom-6 lg:-bottom-16 px-6">
+            <div className="w-full flex justify-center absolute bottom-6 lg:-bottom-20 px-6">
               <a
                 target="_blank"
                 className=" flex justify-center bg-white items-center text-[#180934] font-bold text-md py-1 px-16 rounded-xl max-w-[450px] min-w-[450px] min-h-[30px] max-h-[30px] lg:max-w-[460px] lg:min-w-[460px] lg:min-h-[39px] lg:max-h-[39px]"
