@@ -34,7 +34,7 @@ export default function surveyPage() {
               <button
                 id="gender"
                 type="button"
-                className="inline-flex items-center px-10 py-4 text-md font-medium text-gray-900 bg-white border border-[#16A34A] rounded-xl hover:bg-green-100 hover:text-[#16A34A] focus:z-10 focus:ring-2 focus:ring-[#16A34A] focus:text-[#16A34A] focus:bg-green-100"
+                className="inline-flex items-center px-10 py-4 text-md font-medium text-secondary-foreground bg-primary-foreground border border-border rounded-xl hover:bg-green-100 hover:text-[#16A34A] focus:z-10 focus:ring-2 focus:ring-ring focus:text-[#16A34A] focus:bg-green-100"
               >
                 <div className="text-xl px-2">
                   <IoIosMale />
@@ -44,7 +44,7 @@ export default function surveyPage() {
 
               <button
                 type="button"
-                className="inline-flex items-center px-10 py-4 text-md font-medium text-gray-900 bg-white border border-[#16A34A] rounded-xl hover:bg-green-100 hover:text-[#16A34A] focus:z-10 focus:ring-2 focus:ring-[#16A34A] focus:text-[#16A34A] focus:bg-green-100"
+                className="inline-flex items-center px-10 py-4 text-md font-medium text-secondary-foreground bg-primary-foreground border border-border rounded-xl hover:bg-green-100 hover:text-[#16A34A] focus:z-10 focus:ring-2 focus:ring-ring focus:text-[#16A34A] focus:bg-green-100"
               >
                 <div className="text-xl px-2">
                   <IoIosFemale />
@@ -54,7 +54,7 @@ export default function surveyPage() {
             </div>
           </div>
           {/* Submit Information button */}
-          <button className="  text-center    bg-[#16A34A] py-4 px-10 font-semibold text-[#FFFFFF] rounded-2xl text-xl ">
+          <button className="  text-center    bg-primary py-4 px-10 font-semibold text-primary-foreground rounded-2xl text-xl ">
             Submit Information
           </button>
         </div>
