@@ -15,6 +15,6 @@ export interface CardsProps {
   os?: string;
   incent?: string;
   url?: string;
-  reward?: number;
+  reward: number;
   favorite?: number;
 }
