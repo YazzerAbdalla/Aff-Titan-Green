@@ -10,8 +10,8 @@ const DialogNewHeader = ({
   description,
 }: CardsProps) => {
   return (
-    <div className="w-full py-4">
-      <div className="flex items-center rounded-2xl gap-4">
+    <div className="w-full py-4 ">
+      <div className="flex items-center  gap-2">
         <img
           className="lg:max-w-[100px] lg:min-w-[100px] lg:max-h-[100px] lg:min-h-[100px] rounded-[20px] min-w-[100px] max-w-[100px]  min-h-[100px] max-h-[100px] py-1"
           src={image}
