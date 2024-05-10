@@ -17,7 +17,7 @@ export default function OfferSurveyFilter({
         onChange={(index) => {
           // Execute additional code here based on the selected tab index
           if (index === 1) {
-            setFilter("survey");
+            setFilter("Survey");
           } else if (index === 0) {
             setFilter("offer");
           }

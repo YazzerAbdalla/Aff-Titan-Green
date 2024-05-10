@@ -6,8 +6,7 @@ import { CardsProps } from "@/types/cardsTypes";
 export default function OfferCard({ reward, name, image }: CardsProps) {
   return (
     <div
-      className=" bg-[#8e8f8e23] max-w-[450px] min-w-[320px] mx-2 p-2 gap-2 border-gray-400 border-2 flex items-center justify-between cursor-pointer flex-row overflow-hidden rounded-xl relative" // Added 'relative' class
-     
+      className=" bg-[#8e8f8e23] max-w-[450px] min-w-[420px] min-h-[55px] mx-2 p-2 gap-2 border-gray-400 border-2 flex items-center justify-between cursor-pointer flex-row overflow-hidden rounded-xl relative" // Added 'relative' class
     >
       <div className="flex flex-row items-center gap-4">
         <div className="h-[52px] w-[52px]">
