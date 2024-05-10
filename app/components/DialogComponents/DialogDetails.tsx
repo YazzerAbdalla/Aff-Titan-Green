@@ -17,49 +17,49 @@ const DialogDetails = ({
           {instructions_array &&
             instructions_array.map((data, index) => (
               <div key={index} className="flex gap-8">
-                <p className="rounded-full border-2 w-fit h-fit px-4 bg-gray-400 text-white text-2xl">
+                <p className="rounded-full border-2 w-fit h-fit px-4 bg-[#16a34a] text-black text-2xl">
                   {index + 1}
                 </p>
-                <h1 className="text-white text-xl">{data}</h1>
+                <h1 className="text-black text-xl">{data}</h1>
               </div>
             ))}
           {!instructions_array && (
             <div className="flex flex-col  gap-8">
               <div className="flex gap-3">
-                <p className="rounded-full border-2 w-fit h-fit px-4 bg-gray-400 text-white text-2xl">
+                <p className="rounded-full border-2 w-fit h-fit px-4 bg-[#16a34a] text-white text-2xl">
                   {1}
                 </p>
-                <h1 className="text-white text-xl">{instructions}</h1>
+                <h1 className="text-black text-xl">{instructions}</h1>
               </div>
               <div className="flex gap-3">
-                <p className="rounded-full border-2 w-fit h-fit px-4 bg-gray-400 text-white text-2xl">
+                <p className="rounded-full border-2 w-fit h-fit px-4 bg-[#16a34a] text-white text-2xl">
                   {2}
                 </p>
-                <h1 className="text-white text-xl">{instructions}</h1>
+                <h1 className="text-black text-xl">{instructions}</h1>
               </div>
               <div className="flex gap-3">
-                <p className="rounded-full border-2 w-fit h-fit px-4 bg-gray-400 text-white text-2xl">
+                <p className="rounded-full border-2 w-fit h-fit px-4 bg-[#16a34a] text-white text-2xl">
                   {3}
                 </p>
-                <h1 className="text-white text-xl">{instructions}</h1>
+                <h1 className="text-black text-xl">{instructions}</h1>
               </div>
               <div className="flex gap-3">
-                <p className="rounded-full border-2 w-fit h-fit px-4 bg-gray-400 text-white text-2xl">
+                <p className="rounded-full border-2 w-fit h-fit px-4 bg-[#16a34a] text-white text-2xl">
                   {4}
                 </p>
-                <h1 className="text-white text-xl">{instructions}</h1>
+                <h1 className="text-black text-xl">{instructions}</h1>
               </div>
               <div className="flex gap-3">
-                <p className="rounded-full border-2 w-fit h-fit px-4 bg-gray-400 text-white text-2xl">
+                <p className="rounded-full border-2 w-fit h-fit px-4 bg-[#16a34a] text-white text-2xl">
                   {5}
                 </p>
-                <h1 className="text-white text-xl">{instructions}</h1>
+                <h1 className="text-black text-xl">{instructions}</h1>
               </div>
               <div className="flex gap-3">
-                <p className="rounded-full border-2 w-fit h-fit px-4 bg-gray-400 text-white text-2xl">
+                <p className="rounded-full border-2 w-fit h-fit px-4 bg-[#16a34a] text-white text-2xl">
                   {6}
                 </p>
-                <h1 className="text-white text-xl">{instructions}</h1>
+                <h1 className="text-black text-xl">{instructions}</h1>
               </div>
             </div>
           )}
