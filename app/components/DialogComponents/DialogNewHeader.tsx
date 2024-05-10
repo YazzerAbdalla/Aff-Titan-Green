@@ -20,10 +20,10 @@ const DialogNewHeader = ({
           height={1000}
         />
         <div className="flex flex-col">
-          <h5 className=" text-[20px] lg:text-[24px] font-[600] tracking-tight text-[#ffff] line-clamp-1">
+          <h5 className=" text-[20px] lg:text-[24px] font-[600] tracking-tight text-black line-clamp-1">
             {name}
           </h5>
-          <p className="mb-1 text-[12px] lg:text-[18px] font-[600] text-[#ffff] line-clamp-1">
+          <p className="mb-1 text-[12px] lg:text-[18px] font-[600] text-black line-clamp-1">
             {short_description ? short_description : description}
           </p>
           <div className=" w-fit border-[1px]  border-[#575859] rounded-3xl py-[1px] px-5 lg:px-10 text-[#575859]  justify-start">
