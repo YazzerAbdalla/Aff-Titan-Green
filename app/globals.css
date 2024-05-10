@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  margin: 0;
+  min-height: 10dvh;
+  background-image: url(/bg.svg);
+  background-size: cover;
+  background-position: 71% 18%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -148,11 +158,11 @@
     --popover-foreground: 240 10% 3.9%;
     /* green main */
     --primary: 142.1 76.2% 36.3%;
-   /* white main */
+    /* white main */
     --primary-foreground: 355.7 100% 97.3%;
-   /* white  */
+    /* white  */
     --secondary: 240 4.8% 95.9%;
-      /* black  main */
+    /* black  main */
     --secondary-foreground: 240 5.9% 10%;
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
