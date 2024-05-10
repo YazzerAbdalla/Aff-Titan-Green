@@ -19,6 +19,7 @@ export default function Home({
   params: { id: string; userID: string };
 }) {
   const [offerFilter, setOfferFilter] = useState("offer");
+  const [points, setPoints] = useState<number | string>(0);
   const [highOrMostPopOrNewSort, setHighOrMostPopOrNewSort] =
     useState("Most Popular");
   const [sortedOffers, setSortedOffers] = useState<CardsProps[]>([]);
@@ -29,13 +30,22 @@ export default function Home({
   useEffect(() => {
     axios
       .get(
-        `https://adspiritmedia.com/api/v1/offers-iframe/${params.id}/${params.userID}`
+        `https://adspiritmedia.com/api/v1/offers-iframe/${params.id}/${params.userID}`,
+        {
+          // query URL without using browser cache
+          headers: {
+            "Cache-Control": "no-cache",
+            Pragma: "no-cache",
+            Expires: "0",
+          },
+        }
       )
       .then((res) => {
         if (res.data.error) {
           setError(res.data.error);
         } else {
           setOffers(res.data.offers);
+          console.log("🚀 ~ .then ~ res.data.points:", res);
         }
         setLoading(false);
       })
@@ -70,7 +80,7 @@ export default function Home({
         <LoadingP4 />
       ) : (
         <>
-          <Nav />
+          <Nav points={points} />
           <div className="min-h-[80dvh]">
             <div className="flex justify-center w-full">
               <OfferSurveyFilter setFilter={setOfferFilter} />

@@ -2,7 +2,8 @@
 "use client";
 import Link from "next/link";
 
-export default function Nav() {
+export default function Nav({ points }: { points: string | number }) {
+  console.log("🚀 ~ Nav ~ points:", points)
   return (
     <div
       className="fixed top-0 left-0 w-full z-50 bg-white"
@@ -21,7 +22,7 @@ export default function Nav() {
         <div className="flex items-center  lg:px-16 justify-end">
           <div className="flex px-4 bg-[#16a34a]   rounded-3xl py-1">
             <img src="/wallet_583985.png" alt="money" />
-            <span className="text-white px-2">0</span>
+            <span className="text-white px-2">{points}</span>
           </div>
           <Link href="https://freecash.com/w/revu">
             <div className="px-5 cursor-pointer">
