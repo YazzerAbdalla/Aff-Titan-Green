@@ -82,7 +82,7 @@ export default function Nav({
             <div
               className={` ${
                 deviceTypeSortMenuOpening == false && "hidden"
-              } bg-[#16a34a] border-2 w-24 h-fit px-2 py-2 rounded-md absolute top-9 right-3 `}
+              } bg-[#16a34a] border-2 w-24 h-fit px-[2px] py-2 rounded-md absolute top-9 right-3 `}
             >
               <h1
                 onClick={() => {
@@ -91,7 +91,7 @@ export default function Nav({
                     setSelectedDeviceSortType("");
                   }
                 }}
-                className={`w-fit h-fit ${
+                className={`w-fit h-fit p-1  ${
                   selectedDeviceSortType == "Android" && "bg-white"
                 } rounded-md transition-shadow`}
               >
@@ -111,7 +111,7 @@ export default function Nav({
                     setSelectedDeviceSortType("");
                   }
                 }}
-                className={`w-fit h-fit ${
+                className={`w-fit h-fit p-1 ${
                   selectedDeviceSortType == "iOS" && "bg-white"
                 } rounded-md transition-shadow`}
               >
@@ -131,7 +131,7 @@ export default function Nav({
                     setSelectedDeviceSortType("");
                   }
                 }}
-                className={`w-fit h-fit ${
+                className={`w-fit h-fit p-1 ${
                   selectedDeviceSortType == "Web" && "bg-white"
                 } rounded-md transition-shadow`}
               >
