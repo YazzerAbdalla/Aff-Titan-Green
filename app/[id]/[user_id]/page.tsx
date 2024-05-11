@@ -14,6 +14,7 @@ import newest from "@/app/(Fun)/Newest";
 import freeOfferSort from "../../(Fun)/FreeSort";
 import mobileSort from "../../(Fun)/MobileSort";
 import AllSort from "../../(Fun)/AllSort";
+import { DeviceTypeSort } from "@/app/(Fun)/DeviceTypeSort";
 
 export default function Home({
   params,
@@ -94,6 +95,11 @@ export default function Home({
     }
     setSortedOffers(OffersAfterSort);
   }, [freeOrAllOrMobileSort, offers]);
+  useEffect(() => {
+    let OffersAfterSort: CardsProps[];
+    OffersAfterSort = DeviceTypeSort(offers, selectedDeviceSortType);
+    setSortedOffers(OffersAfterSort);
+  }, [selectedDeviceSortType, offers]);
 
   return (
     <div>
