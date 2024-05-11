@@ -12,8 +12,9 @@ import { highSort } from "../../(Fun)/HighSort";
 import { MostPopular } from "@/app/(Fun)/MostPopular";
 import newest from "@/app/(Fun)/Newest";
 import freeOfferSort from "../../(Fun)/FreeSort";
-import sortByPoints from "../../(Fun)/FreeSort";
 import mobileSort from "../../(Fun)/MobileSort";
+import AllSort from "../../(Fun)/AllSort";
+
 export default function Home({
   params,
 }: {
@@ -85,7 +86,7 @@ export default function Home({
     if (freeOrAllOrMobileSort === "Free") {
       OffersAfterSort = freeOfferSort(offers);
     } else if (freeOrAllOrMobileSort === "All") {
-      OffersAfterSort = sortByPoints(offers);
+      OffersAfterSort = AllSort(offers);
     } else if (freeOrAllOrMobileSort === "Mobile App") {
       OffersAfterSort = mobileSort(offers);
     } else {
