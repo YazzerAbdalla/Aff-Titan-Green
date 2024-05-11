@@ -91,11 +91,7 @@ export default function Nav({
                     setSelectedDeviceSortType("");
                   }
                 }}
-<<<<<<< HEAD
                 className={`flex flex-row items-center w-full h-fit p-1  ${
-=======
-                className={`w-full h-fit p-1  ${
->>>>>>> a1f38010274e6e247266b66fb432c19788f07812
                   selectedDeviceSortType == "Android" && "bg-white"
                 } rounded-md transition-shadow`}
               >
@@ -161,11 +157,7 @@ export default function Nav({
                     setSelectedDeviceSortType("");
                   }
                 }}
-<<<<<<< HEAD
                 className={`flex flex-row items-center w-full h-fit p-1 ${
-=======
-                className={`w-full h-fit p-1 ${
->>>>>>> a1f38010274e6e247266b66fb432c19788f07812
                   selectedDeviceSortType == "Web" && "bg-white"
                 } rounded-md transition-shadow`}
               >
