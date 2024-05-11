@@ -3,7 +3,7 @@ import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 
 // Change "All" to "All Platforms" or any other label you prefer
-export const platforms = ["All ", "Free", "Mobile App"];
+export const platforms = ["All", "Free", "Mobile App"];
 
 interface SortProps {
   selectedSortType: string;
