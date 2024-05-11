@@ -12,6 +12,7 @@ import { highSort } from "../../(Fun)/HighSort";
 import { MostPopular } from "@/app/(Fun)/MostPopular";
 import newest from "@/app/(Fun)/Newest";
 import freeOfferSort from "../../(Fun)/FreeSort";
+import sortByPoints from "../../(Fun)/FreeSort";
 
 export default function Home({
   params,
@@ -131,12 +132,3 @@ export default function Home({
   );
 }
 
-function sortByPoints(arr: CardsProps[]) {
-  const newArr = arr.map((item) => ({ ...item }));
-
-  newArr.sort((a, b) => {
-    return b.points - a.points;
-  });
-
-  return newArr;
-}
