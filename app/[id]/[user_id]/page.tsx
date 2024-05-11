@@ -30,7 +30,7 @@ export default function Home({
   useEffect(() => {
     axios
       .get(
-        `https://adspiritmedia.com/api/v1/offers-iframe/${params.id}/${params.userID}`,
+        `https://afftitan.com/api/v1/offers-iframe/${params.id}/${params.userID}`,
         {
           // query URL without using browser cache
           headers: {
