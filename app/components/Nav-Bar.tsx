@@ -3,7 +3,6 @@
 import Link from "next/link";
 
 export default function Nav({ points }: { points: string | number }) {
-  console.log("🚀 ~ Nav ~ points:", points)
   return (
     <div
       className="fixed top-0 left-0 w-full z-50 bg-white"

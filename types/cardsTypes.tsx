@@ -9,7 +9,7 @@ export interface CardsProps {
   disclaimer?: string;
   payout?: string;
   image?: string;
-  countries?: string[];
+  countries?: any[];
   instructions_array?: string[];
   goals?: null;
   os?: string;
@@ -17,4 +17,5 @@ export interface CardsProps {
   url?: string;
   reward: number;
   favorite?: number;
+  date: string;
 }

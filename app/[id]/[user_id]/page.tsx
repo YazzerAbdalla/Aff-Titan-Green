@@ -12,6 +12,8 @@ import HighPriceSort from "../../components/HighPriceSort";
 import { highSort } from "../../(Fun)/HighSort";
 import { ErrorType } from "@/types/ErrorType";
 import OffersSurveysContainer from "@/app/components/OffersSurveysContainer";
+import { MostPopular } from "@/app/(Fun)/MostPopular";
+import newest from "@/app/(Fun)/Newest";
 
 export default function Home({
   params,
@@ -66,9 +68,13 @@ export default function Home({
   }, []);
 
   useEffect(() => {
-    let OffersAfterSort;
+    let OffersAfterSort: CardsProps[];
     if (highOrMostPopOrNewSort == "Highest Paying") {
       OffersAfterSort = highSort(offers);
+    } else if (highOrMostPopOrNewSort.includes("Most")) {
+      OffersAfterSort = MostPopular(offers);
+    } else if (highOrMostPopOrNewSort.includes("Newest")) {
+      OffersAfterSort = newest(offers);
     } else {
       OffersAfterSort = offers;
     }
