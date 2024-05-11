@@ -1,19 +1,19 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import axios, { AxiosResponse } from "axios";
+import axios from "axios";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav-Bar";
 import OfferSurveyFilter from "../../components/Offer&SurveyFilter";
-import SurveyPage from "../../components/SurveyPage";
-import { CardsProps } from "@/types/cardsTypes";
-import OfferDialog from "../../components/OfferDialog";
+import OffersSurveysContainer from "../../components/OffersSurveysContainer";
 import LoadingP4 from "@/app/components/LoadingP4";
-import HighPriceSort from "../../components/HighPriceSort";
-import { highSort } from "../../(Fun)/HighSort";
+import { CardsProps } from "@/types/cardsTypes";
 import { ErrorType } from "@/types/ErrorType";
-import OffersSurveysContainer from "@/app/components/OffersSurveysContainer";
+import { highSort } from "../../(Fun)/HighSort";
 import { MostPopular } from "@/app/(Fun)/MostPopular";
 import newest from "@/app/(Fun)/Newest";
+import freeOfferSort from "../../(Fun)/FreeSort";
+import mobileSort from "../../(Fun)/MobileSort";
+import AllSort from "../../(Fun)/AllSort";
 
 export default function Home({
   params,
@@ -24,6 +24,8 @@ export default function Home({
   const [points, setPoints] = useState<number | string>("0");
   const [highOrMostPopOrNewSort, setHighOrMostPopOrNewSort] =
     useState("Most Popular");
+  const [freeOrAllOrMobileSort, setFreeOrAllOrMobileSort] =
+    useState("All Offers");
   const [sortedOffers, setSortedOffers] = useState<CardsProps[]>([]);
   const [offers, setOffers] = useState<CardsProps[]>([]);
   const [loading, setLoading] = useState(true);
@@ -34,7 +36,6 @@ export default function Home({
       .get(
         `https://afftitan.com/api/v1/offers-iframe/${params.id}/${params.userID}`,
         {
-          // query URL without using browser cache
           headers: {
             "Cache-Control": "no-cache",
             Pragma: "no-cache",
@@ -59,17 +60,16 @@ export default function Home({
           });
         } else {
           setError({
-            message: "Some thing wronge !!!",
+            message: "Something went wrong!!!",
           });
         }
         setLoading(false);
       });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [params.id, params.userID]);
 
   useEffect(() => {
     let OffersAfterSort: CardsProps[];
-    if (highOrMostPopOrNewSort == "Highest Paying") {
+    if (highOrMostPopOrNewSort === "Highest Paying") {
       OffersAfterSort = highSort(offers);
     } else if (highOrMostPopOrNewSort.includes("Most")) {
       OffersAfterSort = MostPopular(offers);
@@ -80,6 +80,22 @@ export default function Home({
     }
     setSortedOffers(OffersAfterSort);
   }, [highOrMostPopOrNewSort, offers]);
+
+  useEffect(() => {
+    let OffersAfterSort: CardsProps[];
+    if (freeOrAllOrMobileSort === "Free") {
+      OffersAfterSort = freeOfferSort(offers);
+    } else if (freeOrAllOrMobileSort === "All") {
+      OffersAfterSort = AllSort(offers);
+    } else if (freeOrAllOrMobileSort === "Mobile App") {
+      OffersAfterSort = mobileSort(offers);
+    } else {
+      OffersAfterSort = offers;
+    }
+    setSortedOffers(OffersAfterSort);
+  }, [freeOrAllOrMobileSort, offers]);
+  
+
   return (
     <div>
       {loading ? (
@@ -98,6 +114,8 @@ export default function Home({
                 highOrMostPopOrNewSort={highOrMostPopOrNewSort}
                 setHighOrMostPopOrNewSort={setHighOrMostPopOrNewSort}
                 sortedOffers={sortedOffers}
+                freeOrAllOrMobileSort={freeOrAllOrMobileSort}
+                setFreeOrAllOrMobileSort={setFreeOrAllOrMobileSort}
               />
             ) : (
               <OffersSurveysContainer
@@ -106,6 +124,8 @@ export default function Home({
                 highOrMostPopOrNewSort={highOrMostPopOrNewSort}
                 setHighOrMostPopOrNewSort={setHighOrMostPopOrNewSort}
                 sortedOffers={sortedOffers}
+                freeOrAllOrMobileSort={freeOrAllOrMobileSort}
+                setFreeOrAllOrMobileSort={setFreeOrAllOrMobileSort}
               />
             )}
           </div>
@@ -115,3 +135,4 @@ export default function Home({
     </div>
   );
 }
+

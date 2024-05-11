@@ -2,23 +2,25 @@ import { Dispatch, Fragment, SetStateAction } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 
-export const platforms = ["Most Popular", "Highest Paying", "Newest"];
-interface sortProps {
+// Change "All" to "All Platforms" or any other label you prefer
+export const platforms = ["All", "Free", "Mobile App"];
+
+interface SortProps {
   selectedSortType: string;
   setSelectedSortType: Dispatch<SetStateAction<string>>;
 }
 
-export default function HighPriceSort({
+export default function FreeAllSort({
   selectedSortType,
   setSelectedSortType,
-}: sortProps) {
+}: SortProps) {
   return (
     <div className="flex items-center mt-3 justify-center rounded-lg space-x-4">
       {/* button*/}
       <Listbox value={selectedSortType} onChange={setSelectedSortType}>
         <div className="relative mt-1 min-w-[8.8rem] ">
           <Listbox.Button
-            className="relative w-full cursor-default rounded-lg  text-gray-950 py-3 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-[#16a34a] focus-visible:ring-2 focus-visible:ring-[#16a34a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#16a34a] sm:text-sm"
+            className="relative w-full cursor-default rounded-lg text-gray-950 py-3 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-[#16a34a] focus-visible:ring-2 focus-visible:ring-[#16a34a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#16a34a] sm:text-sm"
             style={{
               background: "#FFFFFF",
             }}

@@ -24,13 +24,20 @@ const OfferDialog = ({
   os,
   url,
   goals,
+  points,
 }: CardsProps) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
         <div className="cursor-pointer ">
           {/** OfferCard */}
-          <OfferCard reward={reward} image={image} name={name} />
+          <OfferCard
+            reward={reward}
+            image={image}
+            name={name}
+            date={""}
+            points={points}
+          />
         </div>
       </DialogTrigger>
       <DialogContent
@@ -48,6 +55,8 @@ const OfferDialog = ({
             image={image}
             short_description={short_description}
             name={name}
+            date={""}
+            points={points}
           />
           <DialogDetails
             reward={reward}
@@ -58,6 +67,8 @@ const OfferDialog = ({
             image={image}
             short_description={short_description}
             name={name}
+            date={""}
+            points={points}
           />
           <DialogFooter>
             <div className="w-full flex justify-center absolute -bottom-0 lg:-bottom-20 px-6">
@@ -67,7 +78,13 @@ const OfferDialog = ({
                 href={url}
               >
                 {`Earn ${reward}  `}
-                <img src={"/coinIcon.png"} alt="" width={20} height={20} className="hidden lg:block" />
+                <img
+                  src={"/coinIcon.png"}
+                  alt=""
+                  width={20}
+                  height={20}
+                  className="hidden lg:block"
+                />
                 {`  Coins `}
               </a>
             </div>
