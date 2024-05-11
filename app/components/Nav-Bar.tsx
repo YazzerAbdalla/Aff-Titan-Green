@@ -2,7 +2,7 @@
 "use client";
 import Link from "next/link";
 import { detectDeviceType } from "../(Fun)/DetectDeviceType";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface NavProps {
   points: string | number;
@@ -15,6 +15,10 @@ export default function Nav({
   setSelectedDeviceSortType,
 }: NavProps) {
   let deviceType = detectDeviceType(navigator.userAgent);
+  useEffect(() => {
+    setSelectedDeviceSortType(deviceType);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const [deviceTypeSortMenuOpening, setDeviceTypeSortMenuOpening] =
     useState(false);
   return (
@@ -50,16 +54,16 @@ export default function Nav({
           >
             <img
               src={
-                deviceType == "iOS"
+                selectedDeviceSortType == "iOS"
                   ? "/ios-icon.svg"
-                  : deviceType == "Android"
+                  : selectedDeviceSortType == "Android"
                   ? "/android.png"
-                  : deviceType == "Web"
+                  : selectedDeviceSortType == "Web"
                   ? "/desktop.svg"
                   : ""
               }
               className={`w-6 h-6 ${
-                deviceType == "Android" && "bg-white rounded-lg"
+                selectedDeviceSortType == "Android" && "bg-white rounded-lg"
               }`}
               alt="Device"
             />
