@@ -24,8 +24,8 @@ const OffersSurveysContainer = ({
   setFreeOrAllOrMobileSort,
 }: offersSurveysContainerProps) => {
   return (
-    <div className="flex flex-col">
-      <div className="w-fit lg:px-48 flex flex-row gap-4">
+    <div className="flex justify-center items-center  flex-col">
+      <div className="w-fit  flex flex-row gap-4">
         <HighPriceSort
           selectedSortType={highOrMostPopOrNewSort}
           setSelectedSortType={setHighOrMostPopOrNewSort}

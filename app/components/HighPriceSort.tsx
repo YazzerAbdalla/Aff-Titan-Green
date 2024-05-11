@@ -18,7 +18,7 @@ export default function HighPriceSort({
       <Listbox value={selectedSortType} onChange={setSelectedSortType}>
         <div className="relative mt-1 min-w-[8.8rem] ">
           <Listbox.Button
-            className="relative w-full cursor-default rounded-lg  text-gray-950 py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm"
+            className="relative w-full cursor-default rounded-lg  text-gray-950 py-3 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-[#16a34a] focus-visible:ring-2 focus-visible:ring-[#16a34a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#16a34a] sm:text-sm"
             style={{
               background: "#FFFFFF",
             }}
@@ -26,7 +26,7 @@ export default function HighPriceSort({
             <span className="block truncate">{selectedSortType}</span>
             <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
               <ChevronUpDownIcon
-                className="h-5 w-5 text-[#0F4889]"
+                className="h-5 w-5 text-[#16a34a]"
                 aria-hidden="true"
               />
             </span>
@@ -43,7 +43,7 @@ export default function HighPriceSort({
                   key={optionIdx}
                   className={({ active }) =>
                     `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                      active ? "bg-amber-100 text-purple-900" : "text-gray-900"
+                      active ? "bg-amber-100 text-[#16a34a]" : "text-gray-900"
                     }`
                   }
                   value={option}
@@ -59,7 +59,7 @@ export default function HighPriceSort({
                         {option}
                       </span>
                       {selected ? (
-                        <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-purple-900 font-solid">
+                        <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-[#16a34a] font-solid">
                           <CheckIcon className="h-5 w-5" aria-hidden="true" />
                         </span>
                       ) : null}
