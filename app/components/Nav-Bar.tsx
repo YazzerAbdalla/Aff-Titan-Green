@@ -82,7 +82,7 @@ export default function Nav({
             <div
               className={` ${
                 deviceTypeSortMenuOpening == false && "hidden"
-              } bg-[#16a34a] border-2 w-24 h-fit px-[2px] py-2 rounded-md absolute top-9 right-3 `}
+              } bg-[white] border-2 w-24 h-fit px-[2px] py-2 rounded-md absolute top-9 right-3 `}
             >
               <h1
                 onClick={() => {
