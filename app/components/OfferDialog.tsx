@@ -85,7 +85,7 @@ const OfferDialog = ({
                   height={20}
                   className="hidden lg:block"
                 />
-                {`  Coins `}
+                
               </a>
             </div>
           </DialogFooter>
