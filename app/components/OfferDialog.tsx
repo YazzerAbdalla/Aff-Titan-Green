@@ -30,7 +30,7 @@ const OfferDialog = ({
       <DialogTrigger asChild>
         <div className="cursor-pointer ">
           {/** OfferCard */}
-          <OfferCard reward={reward} image={image} name={name} />
+          <OfferCard reward={reward} image={image} name={name} date={""} />
         </div>
       </DialogTrigger>
       <DialogContent
@@ -47,8 +47,7 @@ const OfferDialog = ({
             description={description}
             image={image}
             short_description={short_description}
-            name={name}
-          />
+            name={name} date={""}          />
           <DialogDetails
             reward={reward}
             id={id}
@@ -57,8 +56,7 @@ const OfferDialog = ({
             instructions={instructions}
             image={image}
             short_description={short_description}
-            name={name}
-          />
+            name={name} date={""}          />
           <DialogFooter>
             <div className="w-full flex justify-center absolute -bottom-0 lg:-bottom-20 px-6">
               <a
