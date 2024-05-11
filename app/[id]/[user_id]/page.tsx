@@ -13,7 +13,7 @@ import { MostPopular } from "@/app/(Fun)/MostPopular";
 import newest from "@/app/(Fun)/Newest";
 import freeOfferSort from "../../(Fun)/FreeSort";
 import sortByPoints from "../../(Fun)/FreeSort";
-
+import mobileSort from "../../(Fun)/MobileSort";
 export default function Home({
   params,
 }: {
@@ -86,11 +86,14 @@ export default function Home({
       OffersAfterSort = freeOfferSort(offers);
     } else if (freeOrAllOrMobileSort === "All") {
       OffersAfterSort = sortByPoints(offers);
+    } else if (freeOrAllOrMobileSort === "Mobile App") {
+      OffersAfterSort = mobileSort(offers);
     } else {
       OffersAfterSort = offers;
     }
     setSortedOffers(OffersAfterSort);
   }, [freeOrAllOrMobileSort, offers]);
+  
 
   return (
     <div>
