@@ -91,7 +91,7 @@ export default function Nav({
                     setSelectedDeviceSortType("");
                   }
                 }}
-                className={`w-fit h-fit p-1  ${
+                className={`w-full h-fit p-1  ${
                   selectedDeviceSortType == "Android" && "bg-white"
                 } rounded-md transition-shadow`}
               >
@@ -111,7 +111,7 @@ export default function Nav({
                     setSelectedDeviceSortType("");
                   }
                 }}
-                className={`w-fit h-fit p-1 ${
+                className={`w-full h-fit p-1 ${
                   selectedDeviceSortType == "iOS" && "bg-white"
                 } rounded-md transition-shadow`}
               >
@@ -131,7 +131,7 @@ export default function Nav({
                     setSelectedDeviceSortType("");
                   }
                 }}
-                className={`w-fit h-fit p-1 ${
+                className={`w-full h-fit p-1 ${
                   selectedDeviceSortType == "Web" && "bg-white"
                 } rounded-md transition-shadow`}
               >
