@@ -19,7 +19,7 @@ export default function Home({
   params: { id: string; userID: string };
 }) {
   const [offerFilter, setOfferFilter] = useState("offer");
-  const [points, setPoints] = useState<number | string>(0);
+  const [points, setPoints] = useState<number | string>("0");
   const [highOrMostPopOrNewSort, setHighOrMostPopOrNewSort] =
     useState("Most Popular");
   const [sortedOffers, setSortedOffers] = useState<CardsProps[]>([]);
@@ -45,7 +45,7 @@ export default function Home({
           setError(res.data.error);
         } else {
           setOffers(res.data.offers);
-          console.log("🚀 ~ .then ~ res.data.points:", res);
+          setPoints(res.data.points);
         }
         setLoading(false);
       })
