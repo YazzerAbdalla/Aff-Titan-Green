@@ -18,4 +18,5 @@ export interface CardsProps {
   reward: number;
   favorite?: number;
   date: string;
+  points:number;
 }
