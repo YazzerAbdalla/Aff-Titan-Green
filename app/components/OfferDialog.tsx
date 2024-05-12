@@ -25,6 +25,7 @@ const OfferDialog = ({
   url,
   goals,
   points,
+  offer_type,
 }: CardsProps) => {
   return (
     <Dialog>
@@ -57,6 +58,8 @@ const OfferDialog = ({
             name={name}
             date={""}
             points={points}
+            offer_type ={offer_type}
+
           />
           <DialogDetails
             reward={reward}

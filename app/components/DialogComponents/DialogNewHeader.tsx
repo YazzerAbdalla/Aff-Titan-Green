@@ -10,6 +10,7 @@ const DialogNewHeader = ({
   description,
   os,
   reward,
+  offer_type,
 }: CardsProps) => {
   return (
 <div className="w-full py-4">
@@ -47,7 +48,7 @@ const DialogNewHeader = ({
           />
         </div>
         <div className="flex justify-center items-center  px-3 text-gray-500 border-[1px] border-gray-600 font-bold lg:text-md text-sm rounded-md">
-            {reward}
+            {offer_type}
             <img src={"/coinIcon.png"} alt="" width={20} height={20} />
           </div>
 
