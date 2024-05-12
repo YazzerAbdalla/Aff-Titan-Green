@@ -14,6 +14,7 @@ import newest from "@/app/(Fun)/Newest";
 import freeOfferSort from "../../(Fun)/FreeSort";
 import mobileSort from "../../(Fun)/MobileSort";
 import AllSort from "../../(Fun)/AllSort";
+import { DeviceTypeSort } from "@/app/(Fun)/DeviceTypeSort";
 
 export default function Home({
   params,
@@ -21,6 +22,7 @@ export default function Home({
   params: { id: string; userID: string };
 }) {
   const [offerFilter, setOfferFilter] = useState("offer");
+  const [selectedDeviceSortType, setSelectedDeviceSortType] = useState("");
   const [points, setPoints] = useState<number | string>("0");
   const [highOrMostPopOrNewSort, setHighOrMostPopOrNewSort] =
     useState("Most Popular");
@@ -53,7 +55,6 @@ export default function Home({
         setLoading(false);
       })
       .catch((e) => {
-        console.log("🚀 ~ useEffect ~ e:", e);
         if (e.response) {
           setError({
             message: e.response.data.error,
@@ -94,7 +95,11 @@ export default function Home({
     }
     setSortedOffers(OffersAfterSort);
   }, [freeOrAllOrMobileSort, offers]);
-  
+  useEffect(() => {
+    let OffersAfterSort: CardsProps[];
+    OffersAfterSort = DeviceTypeSort(offers, selectedDeviceSortType);
+    setSortedOffers(OffersAfterSort);
+  }, [selectedDeviceSortType, offers]);
 
   return (
     <div>
@@ -102,7 +107,11 @@ export default function Home({
         <LoadingP4 />
       ) : (
         <>
-          <Nav points={points} />
+          <Nav
+            selectedDeviceSortType={selectedDeviceSortType}
+            setSelectedDeviceSortType={setSelectedDeviceSortType}
+            points={points}
+          />
           <div className="min-h-[80dvh]">
             <div className="flex justify-center w-full">
               <OfferSurveyFilter setFilter={setOfferFilter} />
@@ -135,4 +144,3 @@ export default function Home({
     </div>
   );
 }
-

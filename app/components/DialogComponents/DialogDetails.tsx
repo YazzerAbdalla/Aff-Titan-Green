@@ -31,36 +31,6 @@ const DialogDetails = ({
                 </p>
                 <h1 className="text-black text-xl">{instructions}</h1>
               </div>
-              <div className="flex gap-3">
-                <p className="rounded-full border-2 w-fit h-fit px-4 bg-[#16a34a] text-white text-2xl">
-                  {2}
-                </p>
-                <h1 className="text-black text-xl">{instructions}</h1>
-              </div>
-              <div className="flex gap-3">
-                <p className="rounded-full border-2 w-fit h-fit px-4 bg-[#16a34a] text-white text-2xl">
-                  {3}
-                </p>
-                <h1 className="text-black text-xl">{instructions}</h1>
-              </div>
-              <div className="flex gap-3">
-                <p className="rounded-full border-2 w-fit h-fit px-4 bg-[#16a34a] text-white text-2xl">
-                  {4}
-                </p>
-                <h1 className="text-black text-xl">{instructions}</h1>
-              </div>
-              <div className="flex gap-3">
-                <p className="rounded-full border-2 w-fit h-fit px-4 bg-[#16a34a] text-white text-2xl">
-                  {5}
-                </p>
-                <h1 className="text-black text-xl">{instructions}</h1>
-              </div>
-              <div className="flex gap-3">
-                <p className="rounded-full border-2 w-fit h-fit px-4 bg-[#16a34a] text-white text-2xl">
-                  {6}
-                </p>
-                <h1 className="text-black text-xl">{instructions}</h1>
-              </div>
             </div>
           )}
         </div>
