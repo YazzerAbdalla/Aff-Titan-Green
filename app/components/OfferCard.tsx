@@ -9,11 +9,19 @@ export default function OfferCard({
   image,
   short_description,
   os,
+  favorite,
 }: CardsProps) {
   return (
     <div
-      className=" bg-[#8e8f8e23] max-w-[450px] min-w-[360px] min-h-[55px] p-2 gap-2 my-1 border-gray-400 border-2 flex items-center justify-between cursor-pointer flex-row overflow-hidden rounded-xl " // Added 'relative' class
+      className=" bg-[#8e8f8e23] max-w-[450px] min-w-[360px] min-h-[55px] p-2 gap-2 my-1 border-gray-400 border-2 flex items-center justify-between cursor-pointer flex-row  rounded-xl relative " // Added 'relative' class
     >
+      <img
+        className={`absolute -top-3 -right-2 hidden ${
+          favorite == 1 && "block"
+        } `}
+        src="/fire.png"
+        alt="Fire"
+      />
       <div className="flex flex-row gap-4">
         {/** The Card image*/}
         <div className="min-h-[52px] max-h-[52px] min-w-[52px] max-w-[52px]">
@@ -37,7 +45,7 @@ export default function OfferCard({
           </div>
           {/** The Device icon and the rewards amound */}
           <div className="flex flex-row items-center justify-end gap-4">
-            <div className="w-fit border-[2px] rounded-3xl py-1 px-1  lg:px-2">
+            <div className="w-fit rounded-3xl py-1 px-1  lg:px-2">
               <img
                 src={
                   os?.toLowerCase() === "web"

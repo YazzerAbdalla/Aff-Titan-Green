@@ -26,6 +26,7 @@ const OfferDialog = ({
   goals,
   points,
   offer_type,
+  favorite,
 }: CardsProps) => {
   return (
     <Dialog>
@@ -40,6 +41,7 @@ const OfferDialog = ({
             short_description={short_description}
             points={points}
             os={os}
+            favorite={favorite}
           />
         </div>
       </DialogTrigger>
