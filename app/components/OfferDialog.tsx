@@ -39,6 +39,7 @@ const OfferDialog = ({
             date={""}
             short_description={short_description}
             points={points}
+            os={os}
           />
         </div>
       </DialogTrigger>
