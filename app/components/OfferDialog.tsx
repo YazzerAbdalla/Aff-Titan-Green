@@ -37,6 +37,7 @@ const OfferDialog = ({
             image={image}
             name={name}
             date={""}
+            short_description={short_description}
             points={points}
           />
         </div>
@@ -58,8 +59,7 @@ const OfferDialog = ({
             name={name}
             date={""}
             points={points}
-            offer_type ={offer_type}
-
+            offer_type={offer_type}
           />
           <DialogDetails
             reward={reward}
@@ -88,7 +88,6 @@ const OfferDialog = ({
                   height={20}
                   className="hidden lg:block"
                 />
-                
               </a>
             </div>
           </DialogFooter>
