@@ -9,6 +9,7 @@ const DialogNewHeader = ({
   short_description,
   description,
   os,
+  reward,
 }: CardsProps) => {
   return (
 <div className="w-full py-4">
@@ -45,9 +46,11 @@ const DialogNewHeader = ({
             height={20}
           />
         </div>
-        <div className="w-fit border-[1px] border-[#575859] rounded-3xl py-[1px] px-5 lg:px-10 text-[#575859]">
-          <h1>Free</h1>
-        </div>
+        <div className="flex justify-center items-center  px-3 text-gray-500 border-[1px] border-gray-600 font-bold lg:text-md text-sm rounded-md">
+            {reward}
+            <img src={"/coinIcon.png"} alt="" width={20} height={20} />
+          </div>
+
         
        
       </div>
