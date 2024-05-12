@@ -52,21 +52,25 @@ export default function Nav({
             }
             className="p-1 relative flex justify-center items-center rounded-3xl bg-[#16a34a] z-[51] cursor-pointer"
           >
-            <img
-              src={
-                selectedDeviceSortType == "iOS"
-                  ? "/ios-icon.svg"
-                  : selectedDeviceSortType == "Android"
-                  ? "/android.png"
-                  : selectedDeviceSortType == "Web"
-                  ? "/desktop.svg"
-                  : ""
-              }
-              className={`w-6 h-6 ${
-                selectedDeviceSortType == "Android" && "bg-white rounded-lg"
-              }`}
-              alt="Device"
-            />
+            {selectedDeviceSortType !== "" ? (
+              <img
+                src={
+                  selectedDeviceSortType == "iOS"
+                    ? "/ios-icon.svg"
+                    : selectedDeviceSortType == "Android"
+                    ? "/android.png"
+                    : selectedDeviceSortType == "Web"
+                    ? "/desktop.svg"
+                    : ""
+                }
+                className={`w-6 h-6 ${
+                  selectedDeviceSortType == "Android" && "bg-white rounded-lg"
+                }`}
+                alt="Device"
+              />
+            ) : (
+              <h1 className="font-bold">All</h1>
+            )}
             <span className="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
