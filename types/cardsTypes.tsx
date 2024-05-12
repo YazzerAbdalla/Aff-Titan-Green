@@ -14,7 +14,7 @@ export interface CardsProps {
   goals?: null;
   os?: string;
   incent?: string;
-  url?: string;
+  url: string;
   reward: number;
   favorite?: number;
   date: string;
