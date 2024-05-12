@@ -29,7 +29,7 @@ const OfferDialog = ({
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="cursor-pointer ">
+        <div className="cursor-pointer lg:-mx-7 ">
           {/** OfferCard */}
           <OfferCard
             reward={reward}
