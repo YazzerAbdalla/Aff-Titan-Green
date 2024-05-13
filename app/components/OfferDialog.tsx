@@ -80,6 +80,8 @@ const OfferDialog = ({
             date={""}
             points={points}
             url=""
+            goals={goals}
+            payout={""}
           />
           <DialogFooter>
             {os !== "web" && os !== "Web" ? (

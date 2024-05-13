@@ -11,7 +11,7 @@ export interface CardsProps {
   image?: string;
   countries?: any[];
   instructions_array?: string[];
-  goals?: null;
+  goals?: string[];
   os?: string;
   incent?: string;
   url: string;
