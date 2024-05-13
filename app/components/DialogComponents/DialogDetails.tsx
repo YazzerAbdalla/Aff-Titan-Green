@@ -48,8 +48,8 @@ const DialogDetails = ({
               key={index}
               className="w-full border-t-[15px]  border-[#16a34a] rounded-[14px] p-6"
             >
-              <span className="text-md font-semibold text-black ">
-                Instrucions : 
+              <span className="text-xl font-semibold text-black ">
+              goals : 
               </span>
 
               <p className="rounded-full border-2 w-fit h-fit px-4 bg-[#16a34a] text-black text-2xl">
