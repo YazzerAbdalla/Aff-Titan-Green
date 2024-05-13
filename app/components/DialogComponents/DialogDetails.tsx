@@ -32,7 +32,7 @@ const DialogDetails = ({
                 <h1 className="text-black text-xl">{data}</h1>
               </div>
             ))}
-          {!instructions_array && (
+          {!instructions_array && !goals && (
             <div className="flex flex-col  gap-8">
               <div className="flex gap-3">
                 <p className="rounded-full border-2 w-fit h-fit px-4 bg-[#16a34a] text-white text-2xl">
@@ -46,6 +46,7 @@ const DialogDetails = ({
 
         <div className="mb-6">
           {goals &&
+            !instructions_array &&
             goals.map(({ payout, name }, index) => (
               <>
                 <div key={index} className="w-full mt-2 ">
