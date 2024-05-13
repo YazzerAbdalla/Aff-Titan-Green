@@ -13,7 +13,7 @@ export default function OfferCard({
 }: CardsProps) {
   return (
     <div
-      className=" bg-[#8e8f8e23] max-w-[450px] min-w-[360px] min-h-[55px] p-2 gap-2 my-1 border-gray-400 border-2 flex items-center justify-between cursor-pointer flex-row  rounded-xl relative " // Added 'relative' class
+      className=" bg-[#8e8f8e23] max-w-[360px] lg:max-w-[420px] min-w-[300px] lg:min-w-[360px] min-h-[55px] p-2 gap-2 my-1 border-gray-400 border-2 flex items-center justify-between cursor-pointer flex-row  rounded-xl relative " // Added 'relative' class
     >
       <img
         className={`absolute -top-3 -right-2 hidden ${
@@ -33,9 +33,9 @@ export default function OfferCard({
             typeof="lazy"
           />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col w-full">
           {/** The Name and the short description */}
-          <div className="flex flex-col min-w-[360px] ">
+          <div className="flex flex-col w-[270px] lg:w-[300]">
             <div className="font-bold text-md text-black   line-clamp-1">
               {name}
             </div>
@@ -44,7 +44,7 @@ export default function OfferCard({
             </div>
           </div>
           {/** The Device icon and the rewards amound */}
-          <div className="flex flex-row items-center justify-end gap-4">
+          <div className="flex flex-row items-center w-full justify-end gap-2">
             <div className="w-fit rounded-3xl py-1 px-1  lg:px-2">
               <img
                 src={
@@ -60,7 +60,7 @@ export default function OfferCard({
                 height={200}
               />
             </div>
-            <div className="flex justify-center items-center bg-[#16a34a] px-3 text-white font-bold lg:text-md text-sm rounded-md max-w-[90px] min-w-[90px] min-h-[25px] max-h-[25px] lg:max-w-[101px] lg:min-w-[101px] lg:min-h-[30px] lg:max-h-[30px]">
+            <div className="flex justify-center items-center bg-[#16a34a] px-3 text-white font-bold lg:text-md text-sm rounded-md  min-w-[90px] min-h-[25px] max-h-[25px]  lg:min-w-[101px] lg:min-h-[30px] lg:max-h-[30px]">
               {reward}{" "}
               <img src={"/coinIcon.png"} alt="" width={20} height={20} />
             </div>

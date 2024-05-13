@@ -26,6 +26,7 @@ export default function Nav({
       className="fixed top-0 left-0 w-full z-50 bg-white"
       style={{ boxShadow: "2px 10px 21px #0000001a" }}
     >
+      {/* Site logo */}
       <div className="flex justify-between lg:px-48 py-7">
         <div className="flex items-center px-3  lg:px-16 justify-start">
           <span className="text-[#16a34a] text-3xl font-bold">
@@ -36,7 +37,7 @@ export default function Nav({
           </span>
         </div>
 
-        <div className="flex items-center  lg:px-16 justify-end">
+        <div className="flex items-center">
           <div className="flex px-4 bg-[#16a34a]   rounded-3xl py-1">
             <img src="/wallet_583985.png" alt="money" />
             <span className="text-white px-2">{points}</span>

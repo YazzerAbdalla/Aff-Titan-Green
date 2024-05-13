@@ -38,7 +38,7 @@ const OffersSurveysContainer = ({
 
       <div className="flex justify-center mt-6 w-full">
         {sortedOffers.length > 0 ? (
-          <div className="lg:grid grid-cols-2 lg:gap-y-2  lg:gap-x-16 flex flex-col  justify-center">
+          <div className="lg:grid grid-cols-2 lg:gap-y-2  lg:gap-x-20 flex flex-col  justify-center">
             {sortedOffers
               .filter(({ model }) => model === filterKey)
               .map((offer) => (
