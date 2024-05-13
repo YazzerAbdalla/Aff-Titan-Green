@@ -1,3 +1,8 @@
+export interface GoalsProps {
+  payout: string;
+  name: string;
+  amount: number;
+}
 export interface CardsProps {
   id?: number;
   offer_type?: string;
@@ -11,12 +16,12 @@ export interface CardsProps {
   image?: string;
   countries?: any[];
   instructions_array?: string[];
-  goals?: string[];
+  goals?: GoalsProps[];
   os?: string;
   incent?: string;
   url: string;
   reward: number;
   favorite?: number;
   date: string;
-  points:number;
+  points: number;
 }

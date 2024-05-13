@@ -29,7 +29,6 @@ const OfferDialog = ({
   offer_type,
   favorite,
 }: CardsProps) => {
-  console.log("🚀 ~ os:", os);
   return (
     <Dialog>
       <DialogTrigger asChild>
