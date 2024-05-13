@@ -56,8 +56,9 @@ const DialogDetails = ({
                 {index + 1}
               </p>
               {/* <h1 className="text-black text-xl">{payout}</h1> */}
-              <h1 className="text-black text-xl">{name}</h1>
-              <h1 className="text-black text-xl">{reward}</h1>
+              <div className="flex justify-between"><h1 className="text-black text-xl">{name}</h1>
+              <button className="bg-[#16a34a] items-center text-white px-4 rounded-xl py-1 text-xl ">{reward}</button>
+              </div>
             </div>
           ))}
       </div>
