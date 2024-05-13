@@ -11,7 +11,6 @@ const DialogDetails = ({
   reward,
 }: CardsProps) => {
   const hrStyle: React.CSSProperties = { borderColor: "black" };
-
   return (
     <div className="w-full h-[250px] overflow-y-auto">
       <div className="flex flex-col w-full gap-1">
@@ -45,27 +44,34 @@ const DialogDetails = ({
           )}
         </div>
 
-        {goals &&
-          goals.map(({ payout, name }, index) => (
-            <>
-              <div key={index} className="w-full mt-2 ">
-                <div className="flex gap-3">
-                  <p className="rounded-full border-2 w-fit h-fit px-4 bg-[#16a34a] text-black text-2xl">
-                    {index + 1}
-                  </p>
-                  {/* <h1 className="text-black text-xl">{payout}</h1> */}
-                  <h1 className="text-black text-xl">{name}</h1>
+        <div className="mb-6">
+          {goals &&
+            goals.map(({ payout, name }, index) => (
+              <>
+                <div key={index} className="w-full mt-2 ">
+                  <div className="flex gap-3">
+                    <p className="rounded-full border-2 w-fit h-fit px-4 bg-[#16a34a] text-black text-2xl">
+                      {index + 1}
+                    </p>
+                    {/* <h1 className="text-black text-xl">{payout}</h1> */}
+                    <h1 className="text-black text-xl">{name}</h1>
+                  </div>
+                  <div className="flex justify-end">
+                    <button className="bg-[#16a34a] flex items-center text-white px-4 rounded-xl py-1 text-xl ">
+                      {reward}
+                      <img
+                        src={"/coinIcon.png"}
+                        alt=""
+                        width={20}
+                        height={20}
+                      />
+                    </button>
+                  </div>
                 </div>
-                <div className="flex justify-end">
-                  <button className="bg-[#16a34a] flex items-center text-white px-4 rounded-xl py-1 text-xl ">
-                    {reward}
-                    <img src={"/coinIcon.png"} alt="" width={20} height={20} />
-                  </button>
-                </div>
-              </div>
-              <hr className="bg-[#e5e5e6] mt-2" />
-            </>
-          ))}
+                <hr className="bg-[#e5e5e6] mt-2" />
+              </>
+            ))}
+        </div>
       </div>
     </div>
   );
