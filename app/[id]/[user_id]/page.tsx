@@ -15,6 +15,8 @@ import freeOfferSort from "../../(Fun)/FreeSort";
 import mobileSort from "../../(Fun)/MobileSort";
 import AllSort from "../../(Fun)/AllSort";
 import { DeviceTypeSort } from "@/app/(Fun)/DeviceTypeSort";
+import { data } from "@/types/data";
+import { addDateAndPointsToObjects } from "@/app/(Fun)/AddTheDateProp";
 
 export default function Home({
   params,
@@ -34,39 +36,9 @@ export default function Home({
   const [error, setError] = useState<ErrorType>();
 
   useEffect(() => {
-    axios
-      .get(
-        `https://afftitan.com/api/v1/offers-iframe/${params.id}/${params.userID}`,
-        {
-          headers: {
-            "Cache-Control": "no-cache",
-            Pragma: "no-cache",
-            Expires: "0",
-          },
-        }
-      )
-      .then((res) => {
-        if (res.data.error) {
-          setError(res.data.error);
-        } else {
-          setOffers(res.data.offers);
-          setPoints(res.data.points);
-        }
-        setLoading(false);
-      })
-      .catch((e) => {
-        if (e.response) {
-          setError({
-            message: e.response.data.error,
-          });
-        } else {
-          setError({
-            message: "Something went wrong!!!",
-          });
-        }
-        setLoading(false);
-      });
-  }, [params.id, params.userID]);
+    setOffers(addDateAndPointsToObjects(data, "2024-07-04"));
+    setLoading(false);
+  }, []);
 
   useEffect(() => {
     let OffersAfterSort: CardsProps[];
